@@ -618,7 +618,7 @@ Static say_SquadronCreated $= Created new Squadron %(EventClass_Name);Created %(
 Static say_SquadronDemotion $= {You've must have been Naughty!;oh Dear;Oh no!}, You've been demoted by your Squadron %(EventClass_Name) to Rank %(EventClass_NewRank)
 Static say_SquadronPromotion $= {Well Done;Congratulations;Bravo!} You've been promoted by your Squadron %(EventClass_Name) to Rank %(EventClass_NewRank)
 
-Static say_Touchdown $= %iftrue(EventClass_PlayerControlled,'{Landing successful Commandant;Landed Commandant;Touchdown!}{ at Lattitude %round(EventClass_Latitude,2,M0.##), Longitude %round(EventClass_Longitude,2,M0.##), }Well done Commandant;Engines off;Prepare for surface operations','Ship returned from orbit and is ready to board;Ship landed, ready to board')
+Static say_Touchdown $= "{%iftrue(EventClass_PlayerControlled,'Atterrissage réussi, félicitations Commandant','Atterrissage automatique réussi')}{, lattitude %round(EventClass_Latitude,2,M0.##), longitude %round(EventClass_Longitude,2,M0.##)}
 Static say_TechnologyBroker $= "Technology Broker has unlocked item %expandarray(EventClass_ItemsUnlocked,\", \",0,9,\"\",\"_Name_Localised\")"
 
 Static say_Undocked $= Undocked from %sc(EventClass_StationName) fly safe Commandant;Ship ready, your in control Commandant; Engines on, departing %sc(EventClass_StationName);Departing station %sc(EventClass_StationName)
